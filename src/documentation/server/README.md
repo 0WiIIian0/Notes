@@ -18,5 +18,6 @@
 | [POST] | /user/signin | name, email | login |
 | [POST] | /user/signout | No arguments | explicit  |
 | [POST] | /user/delete | No arguments | delete current user |
-
-
+| [POST] | /user/change/name | name | update user's name |
+| [POST] | /user/change/email | email | update user's email |
+| [POST] | /user/change/password | old-password, new-password | update user's password |
