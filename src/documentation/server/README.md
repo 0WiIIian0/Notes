@@ -4,10 +4,10 @@
 
 | PROTOCOL | End-Point | Arguments | Short description |
 | -------- | --------- | --------- | ----------------- |
-| [POST] | /notes/post | name, content |  explicit |
-| [POST] | /notes/update | id, name, content | explicit |
+| [POST] | /notes/post | title, content |  explicit |
+| [POST] | /notes/update | id, title, content | explicit |
 | [GET] | /notes/get | id | get a expecific note  |
-| [GET] | /notes/getAll | name, content | get all user's notes  |
+| [GET] | /notes/getAll | No arguments | get all user's notes  |
 | [GET] | /notes/delete | id | explicit |
 
 ### Session/Account
@@ -20,4 +20,4 @@
 | [POST] | /user/delete | No arguments | delete current user |
 | [POST] | /user/change/name | name | update user's name |
 | [POST] | /user/change/email | email | update user's email |
-| [POST] | /user/change/password | old-password, new-password | update user's password |
+| [POST] | /user/change/password | current-password, new-password | update user's password |
