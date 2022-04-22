@@ -1,44 +1,22 @@
 # End-points
 
-## Session/Account
-<details>
-  <summary>[POST] /user/signup</summary>
-  <details>
-    <summary>Arguments</summary>
-    <p>
-      name: String
-      email: String
-      password: String
-    </p>
-  </details>
-</details>
+### Notes
 
-[POST] /user/signin
-email: String
-password: String
+| PROTOCOL | End-Point | Arguments | Short description |
+| -------- | --------- | --------- | ----------------- |
+| [POST] | /notes/post | name, content |  explicit |
+| [POST] | /notes/update | id, name, content | explicit |
+| [GET] | /notes/get | id | get a expecific note  |
+| [GET] | /notes/getAll | name, content | get all user's notes  |
+| [GET] | /notes/delete | id | explicit |
 
-[GET]  /user/signout
-No arguments
+### Session/Account
 
-[GET]  /user/delete
-No arguments
+| PROTOCOL | End-Point | Arguments | Short description |
+| -------- | --------- | --------- | ----------------- |
+| [POST] | /user/signup | name, email, password | register a new user |
+| [POST] | /user/signin | name, email | login |
+| [POST] | /user/signout | No arguments | explicit  |
+| [POST] | /user/delete | No arguments | delete current user |
 
 
-## Note Management
-
-[POST] /notes/post
-name: String
-content: String
-
-[POST] /notes/edit?:id
-name: String
-content: String
-
-[GET]  /notes/get?:id
-id: Number
-
-[GET]  /notes/getAll
-No arguments
-
-[GET]  /notes/delete?:id
-id: Number
