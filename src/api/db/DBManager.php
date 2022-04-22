@@ -1,7 +1,7 @@
 <?php
-    <?php
-
+    
     class DB {
+        
         public $pdo;
     
         function __construct() {
@@ -16,5 +16,4 @@
     
     }
     
-    ?>
 ?>

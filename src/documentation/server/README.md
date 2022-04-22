@@ -15,7 +15,7 @@
 | PROTOCOL | End-Point | Arguments | Short description |
 | -------- | --------- | --------- | ----------------- |
 | [POST] | /user/signup | name, email, password | register a new user |
-| [POST] | /user/signin | name, email | login |
+| [POST] | /user/signin | email, password | login |
 | [POST] | /user/signout | No arguments | explicit  |
 | [POST] | /user/delete | No arguments | delete current user |
 | [POST] | /user/change/name | name | update user's name |
