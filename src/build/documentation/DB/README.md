@@ -1,4 +1,10 @@
-# Tables
+## Database
+
+```mysql
+create database notes;
+```
+
+## Tables
 
 ```mysql
 create table users (
