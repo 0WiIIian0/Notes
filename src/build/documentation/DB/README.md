@@ -7,7 +7,7 @@ create database notes;
 ## Tables
 
 ```mysql
-create table users (
+create table if not exists users (
   id int not null AUTO_INCREMENT,
   primary key(id),
   name text,
@@ -17,7 +17,7 @@ create table users (
 ```
 
 ```mysql
-create table notes (
+create table if not exists notes (
   id int not null AUTO_INCREMENT,
   primary key(id),
   owner int,
