@@ -14,18 +14,18 @@
       <h1>Hi, welcome to Notes :)<h1>
     </div>
     <div class="flexBox justifyEvenly rowDirection flexWrap">
-      <form class="flexBox columnDirection">
+      <form id="signin" class="flexBox columnDirection">
         <h2>Sign In</h2>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input type="email" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
         <input class="hoverGrow" type="submit"/>
       </form>
-      <form class="flexBox columnDirection">
+      <form id="signup" class="flexBox columnDirection">
         <h2>Sign Up</h2>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Confirm Password" />
+        <input type="text" name="name" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" />
         <input class="hoverGrow" type="submit"/>
       </form>
     </div>

@@ -2,36 +2,46 @@
 
 	include_once("../db/DBManager.php");
 
-	$my_DB = new DB();	
+	$my_DB = new DB();
 	
 	$pdo = $my_DB->pdo;
 
-	$sql = "insert into notes (nome, email, password) values (:nome, :email, :password)";
+	$sql = "insert into users (name, email, password) values (:name, :email, :password)";
 
 	$cmd = $pdo->prepare($sql);
 
-	$name = $_POST['name'];               
-	$email = $_POST['email'];     
-	$password = $_POST['password'];
+	$name = $_GET['name'];               
+	$email = $_GET['email'];     
+	$password = $_GET['password'];
 
-	$cmd->bindValue(":nome", $nome);                    
+	$cmd->bindValue(":name", $name);                    
 	$cmd->bindValue(":email", md5($email));         
-	$cmd->bindValue(":password", password_hash($password), PASSWORD_DEFAULT); 
+	$cmd->bindValue(":password", password_hash($password, PASSWORD_DEFAULT)); 
 
-	$cmd->execute();
+	$result = $cmd->execute();
+  
+	echo json_encode(array(
+		'result' => $result,
+		'error' => $pdo->errorInfo()
+	));
 
-    echo json_encode($name,$email,$password);
-    
-	if($dados = $cmd->fetch(PDO::FETCH_ASSOC))
+	return;
+
+	if($result > 0)
 	{
+
 		echo json_encode(array(
 			'result' => 201
 		));
+
 	}
 	else
 	{
+
 		echo json_encode(array(
-			'result' => 500
+			'error' => $pdo->errorInfo()
 		));
+
 	}
+
 ?>
