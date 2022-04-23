@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="description" content="Save your daily notes online">
     <link rel="stylesheet" type="text/css" href="./assets/css/simplified.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/elementManager.css">

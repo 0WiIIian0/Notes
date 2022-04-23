@@ -5,7 +5,14 @@ const root = (
   tag: 'div',
   id: "root",
   class: "flexBox rowDirection",
-  content: [    
+  content: [  
+  createElement({
+    tag: 'input',
+    id: "mobileMenu",
+    attributes: {    
+      type: "checkbox",
+    },
+  }),    
     createElement({
       tag: 'div',
       id: "noteList",

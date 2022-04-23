@@ -18,10 +18,11 @@
 	
 	$cmd->execute();
 
-    echo json_encode($email,$password);
+  echo json_encode($email,$password);
     
 	if( $dados = $cmd->fetch(PDO::FETCH_ASSOC) )
 	{
+		
 		if(password_verify($password,$dados['pass']))
 		{
 			$_SESSION['id']   = $dados['id'];
