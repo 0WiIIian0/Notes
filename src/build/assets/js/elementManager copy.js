@@ -417,7 +417,6 @@ community that uses this project.
                   zIndex: computedStyle.zIndex || element.style.position,
                   padding: computedStyle.padding || element.style.padding,
                   minWidth: computedStyle.minWidth || element.style.minWidth,
-                  minHeight: computedStyle.minHeight || element.style.minHeight,
               };
 
               clickInfo.canceled = false;
@@ -442,7 +441,6 @@ community that uses this project.
               }
 
               element.style.minWidth = `${element.getBoundingClientRect().width - (parseFloat(computedStyle.padding) * 2)}px`;
-              element.style.minHeight = `${element.getBoundingClientRect().height - (parseFloat(computedStyle.padding) * 2)}px`;
               
               element.style.overflow = 'hidden';
 
@@ -552,7 +550,6 @@ community that uses this project.
                       checkBeforeUpdate('position');
                       checkBeforeUpdate('zIndex');
                       checkBeforeUpdate('minWidth');
-                      checkBeforeUpdate('minHeight');
                       element.removeChild(rippleElement);
                   }
 
